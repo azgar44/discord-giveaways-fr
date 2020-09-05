@@ -1,0 +1,62 @@
+{
+  "_from": "discord-giveaways-fr",
+  "_inBundle": false,
+  "_integrity": "sha512-P/vWZlJP7/30Vprq7ngjI+8wHLIBoiTbqiBb5FFJKGsJk6HMW2Dn3qUzTME1LM/WUteSY5SQYS/rJSHwRKyP7w==",
+  "_location": "/discord-giveaways-fr",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "discord-giveaways-fr",
+    "name": "discord-giveaways-fr",
+    "escapedName": "discord-giveaways-fr",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/discord-giveaways-fr/-/discord-giveaways-fr-0.0.1.tgz",
+  "_shasum": "4c875ea3ee159fb81722fdecdd138e044695c22c",
+  "_spec": "discord-giveaways-fr",
+  "_where": "C:\\Users\\Home\\Desktop\\DGFR",
+  "author": "Théo Chauvet",
+  "bugs": {
+    "url": "https://github.com/azgar44/discord-giveaways-fr/issues"
+  },
+  "deprecated": false,
+  "description": "<a href=\"https://www.npmjs.com/package/discord-giveaways-fr\"><img src=\"https://img.shields.io/npm/dt/discord-giveaways-fr?label=T%C3%A9l%C3%A9chargements%20%E2%99%A5\" alt=\"Les téléchargements du module. Merci à vous :DD\" /></a> - Ceci est la traduction du module [\"Discord Giveaways\" d'Androz2091](https://github.com/Androz2091/discord-giveaways). (seulement les messages)<br>Allez le checkez s'il vous plaît :)</br>",
+  "homepage": "https://github.com/azgar44/discord-giveaways-fr#readme",
+  "keywords": [
+    "discord",
+    "discord-giveaways",
+    "discord-giveaways-fr",
+    "discordjs"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "discord-giveaways-fr",
+  "repository": {
+    "url": "git://https://github.com/azgar44/discord-giveaways-fr.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.3",
+  "dependencies": {
+    "deepmerge": "^4.2.2"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.5",
+    "discord.js": "^12.2.0",
+    "jsdoc": "^3.6.4",
+    "minami": "github:Androz2091/minami",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.3"
+  }
+}
