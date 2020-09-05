@@ -269,7 +269,7 @@ class Giveaway extends EventEmitter {
             if (!message) {
                 this.manager.giveaways = this.manager.giveaways.filter((g) => g.messageID !== this.messageID);
                 this.manager.deleteGiveaway(this.messageID);
-                return reject('Impossible de récupérer un message avec l\'ID ' + this.messageID + '.');
+                return reject('Unable to fetch message with ID ' + this.messageID + '.');
             }
             this.message = message;
             resolve(message);
@@ -315,14 +315,14 @@ class Giveaway extends EventEmitter {
     edit(options = {}) {
         return new Promise(async (resolve, reject) => {
             if (this.ended) {
-                return reject('Le concours avec l\'ID (du message) ' + this.messageID + ' est déjà fini.');
+                return reject('Giveaway with message ID ' + this.messageID + ' is already ended.');
             }
             if (!this.channel) {
-                return reject('Incapable d\'avoir le channel du concours avec l\'ID (du message) ' + this.messageID + '.');
+                return reject('Unable to get the channel of the giveaway with message ID ' + this.messageID + '.');
             }
             await this.fetchMessage().catch(() => {});
             if (!this.message) {
-                return reject('Impossible de récupérer un message avec l\'ID ' + this.messageID + '.');
+                return reject('Unable to fetch message with ID ' + this.messageID + '.');
             }
             // Update data
             if (options.newWinnerCount) this.winnerCount = options.newWinnerCount;
@@ -342,14 +342,14 @@ class Giveaway extends EventEmitter {
     end(){
         return new Promise(async (resolve, reject) => {
             if (this.ended) {
-                return reject('Le concours avec l\'ID (du message) ' + this.messageID + ' est déjà fini.');
+                return reject('Giveaway with message ID ' + this.messageID + ' is already ended');
             }
             if (!this.channel) {
-                return reject('Incapable d\'avoir le channel du concours avec l\'ID (du message) ' + this.messageID + '.');
+                return reject('Unable to get the channel of the giveaway with message ID ' + this.messageID + '.');
             }
             await this.fetchMessage().catch(() => {});
             if (!this.message) {
-                return reject('Impossible de récupérer un message avec l\'ID ' + this.messageID + '.');
+                return reject('Unable to fetch message with ID ' + this.messageID + '.');
             }
             let winners = await this.roll();
             this.manager.emit('giveawayEnded', this, winners);
@@ -398,14 +398,14 @@ class Giveaway extends EventEmitter {
     reroll(options){
         return new Promise(async (resolve, reject) => {
             if (!this.ended) {
-                return reject('Le concours avec l\'ID (du message) ' + this.messageID + ' n\'est pas fini.');
+                return reject('Giveaway with message ID ' + this.messageID + ' is not ended.');
             }
             if (!this.channel) {
-                return reject('Incapable d\'avoir le channel du concours avec l\'ID (du message) ' + this.messageID + '.');
+                return reject('Unable to get the channel of the giveaway with message ID ' + this.messageID + '.');
             }
             await this.fetchMessage().catch(() => {});
             if (!this.message) {
-                return reject('Impossible de récupérer un message avec l\'ID ' + this.messageID + '.');
+                return reject('Unable to fetch message with ID ' + this.messageID + '.');
             }
             let winners = await this.roll();
             if (winners.length > 0) {
